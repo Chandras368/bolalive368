@@ -1,0 +1,113 @@
+//banner version one
+.bn__thumb1{
+    background: url(../../assets/img/bn/bnslide1.jpg) no-repeat center center;
+    background-size: cover;
+    @include breakpoint(max-lg){
+        height: 70vh;
+    }
+    @include breakpoint(max-md){
+        height: 60vh;
+    }
+    @include breakpoint(max-sm){
+        height: 54vh;
+    }
+}
+.bn__thumb2{
+    background: url(../../assets/img/bn/bnslide2.jpg) no-repeat center center;
+    background-size: cover;
+    @include breakpoint(max-lg){
+        height: 70vh;
+    }
+    @include breakpoint(max-md){
+        height: 60vh;
+    }
+    @include breakpoint(max-sm){
+        height: 54vh;
+    }
+}
+.bn__thumb3{
+    background: url(../../assets/img/bn/bnslide3.jpg) no-repeat center center;
+    background-size: cover;
+    @include breakpoint(max-lg){
+        height: 70vh;
+    }
+    @include breakpoint(max-md){
+        height: 60vh;
+    }
+    @include breakpoint(max-sm){
+        height: 54vh;
+    }
+}
+.bn__thumb4{
+    background: url(../../assets/img/bn/bnslide4.jpg) no-repeat center center;
+    background-size: cover;
+    @include breakpoint(max-lg){
+        height: 70vh;
+    }
+    @include breakpoint(max-md){
+        height: 60vh;
+    }
+    @include breakpoint(max-sm){
+        height: 54vh;
+    }
+}
+.bn__thumb5{
+    background: url(../../assets/img/bn/bnslide5.jpg) no-repeat center center;
+    background-size: cover;
+    @include breakpoint(max-lg){
+        height: 70vh;
+    }
+    @include breakpoint(max-md){
+        height: 60vh;
+    }
+    @include breakpoint(max-sm){
+        height: 54vh;
+    }
+}
+.bn__thumb6{
+    background: url(../../assets/img/bn/bnslide6.jpg) no-repeat center center;
+    background-size: cover;
+    @include breakpoint(max-lg){
+        height: 70vh;
+    }
+    @include breakpoint(max-md){
+        height: 60vh;
+    }
+    @include breakpoint(max-sm){
+        height: 54vh;
+    }
+}
+//banner thumb added
+.banner__v1{
+    padding-top: 80px;
+}
+.bn__content__v1{
+    position: relative;
+    .live__badge{
+        width: 79px;
+    }
+    @include breakpoint(max-sm){
+        .title{
+            color: var(--white);
+        }
+    }
+    h1{
+        @include breakpoint(xxl){
+            @include breakpoint(max-xxxl){
+                font-size: 48px;
+            }
+        }
+        @include breakpoint(max-md){
+            font-size: 36px;
+        }
+        @include breakpoint(max-xxs){
+            font-size: 26px;
+        }
+    }
+}
+.bn__navigation {
+    @include breakpoint(max-xs){
+        display: none !important;
+    }
+}
+//banner version one
