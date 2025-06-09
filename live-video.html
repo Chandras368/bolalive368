@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SportStream - Live Streaming HTML Template</title>
+<!--Favicon img-->
+<link href="assets/img/logo/favicon-small.png" rel="shortcut icon"/>
+<!--Bootstarp min css-->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+<!--Bootstarp icon min css-->
+<link href="assets/css/bootstrap.css.map" rel="stylesheet"/>
+<!--all min css-->
+<link href="assets/css/all.min.css" rel="stylesheet"/>
+<!--main css-->
+<link href="assets/css/main.css" rel="stylesheet"/>
+
+<style>
+.chat-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100vh;
+  background: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  border-left: 1px solid #444;
+}
+.chat-header {
+  padding: 15px;
+  background: #222;
+  font-weight: bold;
+  border-bottom: 1px solid #333;
+}
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+#chat-form {
+  display: flex;
+  border-top: 1px solid #333;
+}
+#chat-input {
+  flex: 1;
+  padding: 10px;
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  outline: none;
+}
+#chat-form button {
+  padding: 10px;
+  background: #00aaff;
+  color: white;
+  border: none;
+}
+</style>
+</head>
+<body>
+<!-- Preloader Start Here -->
+<div class="preloader__wrap">
+<div class="preloader__box">
+<div class="recharge">
+<img alt="rechage" src="assets/img/logo/favicon-small.png"/>
+</div>
+</div>
+</div>
+<!-- Preloader End Here -->
+<!-- Header Here -->
+<div class="header__section__attachment">
+<div class="container-fluid p-0-fluid p-0">
+<div class="d-flex">
+<div class="sidebar-wrapper mainbg">
+<div class="bborder pb-24 mb-24 d-flex align-items-center justify-content-between">
+<a class="logo" href="index.html">
+<img alt="img" src="assets/img/logo/logo.png"/>
+</a>
+<div class="closebtn">
+<button class="bgt" type="button">
+<i class="material-symbols-outlined white">
+                        close
+                     </i>
+</button>
+</div>
+</div>
+<ul class="sidebar__menu">
+<li class="liclick">
+<span class="d-flex align-items-center">
+<a class="mclick d-flex hcolor align-items-center w-100 justify-content-between" href="javascript:void(0)">
+<span class="d-flex click__title fs-16 bodyfont d-flex align-items-center gap-2">
+<i class="material-symbols-outlined">
+                           home
+                        </i>
+                        Home
+                       </span>
+<span class="d-flex click__title align-items-center">
+<i class="material-symbols-outlined plus">
+                              add
+                           </i>
+<i class="material-symbols-outlined minus">
+                              remove
+                           </i>
+</span>
+</a>
+</span>
+<div class="menucontent">
+<ul>
+<li>
+<a class="d-flex align-items-center gap-3" href="index.html">
+<i class="material-symbols-outlined">
+                                 home
+                              </i>
+                              Home One
+                           </a>
+</li>
+<li>
+<a class="d-flex align-items-center gap-3" href="index-2.html">
+<i class="material-symbols-outlined">
+                                 home
+                              </i>
+                              Home Two
+                           </a>
+</li>
+</ul>
+</div>
+</li>
+<li class="liclick d-xl-none">
+<span class="d-flex align-items-center">
+<a class="mclick d-flex hcolor align-items-center w-100 justify-content-between" href="javascript:void(0)">
+<span class="d-flex click__title fs-16 bodyfont d-flex align-items-center gap-2">
+<i class="material-symbols-outlined">
+                              flip_camera_android
+                           </i>  
+                           Browse
+                       </span>
+<span class="d-flex click__title align-items-center">
+<i class="material-symbols-outlined plus">
+                              add
+                           </i>
+<i class="material-symbols-outlined minus">
+                              remove
+                           </i>
+</span>
+</a>
+</span>
+<div class="menucontent">
+<ul>
+<li>
+<a class="d-flex align-items-center gap-3" href="signup.html">
+<i class="material-symbols-outlined">
+                              person_add
+                           </i>
+                           Sign Up
+                        </a>
+</li>
+<li>
+<a class="d-flex align-items-center gap-3" href="signin.html">
+<i class="material-symbols-outlined">
+                              supervisor_account
+                           </i>
+                           Sign In
+                        </a>
+</li>
+<li>
+<a class="d-flex align-items-center gap-3" href="faq.html">
+<i class="material-symbols-outlined">
+                              quiz
+                           </i>
+                           FAQs
+                        </a>
+</li>
+<li>
+<a class="d-flex align-items-center gap-3" href="blog.html">
+<i class="material-symbols-outlined">
+                              feed
+                           </i>
+                           Blog
+                        </a>
+</li>
+<li>
+<a class="d-flex align-items-center gap-3" href="blog-details.html">
+<i class="material-symbols-outlined">
+                              breaking_news_alt_1
+                           </i>
+                           Blog Dettails
+                        </a>
+</li>
+<li>
+<a class="d-flex align-items-center gap-3" href="error.html">
+<i class="material-symbols-outlined">
+                              warning
+                           </i>
+                           404 Page
+                        </a>
+</li>
+<li>
+<a class="d-flex align-items-center gap-3" href="contact.html">
+<i class="material-symbols-outlined">
+                              support_agent
+                           </i>
+                           Contact Us
+                        </a>
+</li>
+</ul>
+</div>
+</li>
+<li class="liclick">
+<span class="d-flex align-items-center">
+<a class="mclick d-flex hcolor align-items-center w-100 justify-content-between" href="javascript:void(0)">
+<span class="d-flex click__title fs-16 bodyfont d-flex align-items-center gap-2">
+<i class="material-symbols-outlined">
+                              cast_connected
+                           </i>  
+                           Explore Streaming
+                       </span>
+<span class="d-flex click__title align-items-center">
+<i class="material-symbols-outlined plus">
+                              add
+                           </i>
+<i class="material-symbols-outlined minus">
+                              remove
+                           </i>
+</span>
+</a>
+</span>
+<div class="menucontent">
+<ul>
+<li>
+<a class="d-flex align-items-center" href="live-streaming.html">
+<i class="material-symbols-outlined">
+                                 live_tv
+                              </i>
+                              Live Streaming
+                           </a>
+</li>
+<li>
+<a class="d-flex align-items-center" href="live-sportview.html">
+<i class="material-symbols-outlined">
+                                 preview
+                              </i>
+                              Live Sports View
+                           </a>
+</li>
+<li>
+<a class="d-flex align-items-center" href="higlight-sports.html">
+<i class="material-symbols-outlined">
+                                 movie
+                              </i>
+                              Highlights Sports
+                           </a>
+</li>
+<li class="active">
+<a class="d-flex align-items-center" href="live-video.html">
+<i class="material-symbols-outlined">
+                                 theaters
+                              </i>
+                              Highlights View
+                           </a>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<a class="d-flex hcolor align-items-center gap-3" href="browse-sports.html">
+<i class="material-symbols-outlined">
+                        sports_basketball
+                     </i>
+                     Browse Sports
+                  </a>
+</li>
+<li>
+<a class="d-flex hcolor align-items-center gap-3" href="sport-shedule.html">
+<i class="material-symbols-outlined">
+                        calendar_month
+                     </i>
+                     Sports Schedule
+                  </a>
+</li>
+<li>
+<a class="d-flex hcolor align-items-center gap-3" href="supports.html">
+<i class="material-symbols-outlined">
+                        privacy_tip
+                     </i>
+                     Supports
+                  </a>
+</li>
+</ul>
+<button class="logout__btn fs-16 fw-500 white d-flex align-items-center gap-3" type="button">
+<i class="material-symbols-outlined">
+                  logout
+               </i>
+               Log Out
+            </button>
+</div>
+<div class="header-wrapper mainbg">
+<ul class="main-menuone">
+<li>
+<a class="small__logo" href="index.html">
+<img alt="img" src="assets/img/logo/favicon-small.png"/>
+</a>
+</li>
+<li class="show__upmenu">
+<a class="d-flex align-items-center gap-2" href="javascript:void(0)">
+<i class="material-symbols-outlined hoverround fs-20">
+                        flip_camera_android
+                     </i>
+<span class="d-flex w-100 justify-content-between">
+                        Browse
+                        <span class="d-flex align-items-center">
+<i class="material-symbols-outlined addedicon">
+                              add
+                           </i>
+<i class="material-symbols-outlined minusicon">
+                              remove
+                           </i>
+</span>
+</span>
+</a>
+<ul class="sub-menu">
+<li>
+<a class="d-flex align-items-center gap-3" href="signup.html">
+<i class="material-symbols-outlined">
+                              person_add
+                           </i>
+                           Sign Up
+                        </a>
+</li>
+<li>
+<a class="d-flex align-items-center gap-3" href="signin.html">
+<i class="material-symbols-outlined">
+                              supervisor_account
+                           </i>
+                           Sign In
+                        </a>
+</li>
+<li>
+<a class="d-flex align-items-center gap-3" href="faq.html">
+<i class="material-symbols-outlined">
+                              quiz
+                           </i>
+                           FAQs
+                        </a>
+</li>
+<li>
+<a class="d-flex align-items-center gap-3" href="blog.html">
+<i class="material-symbols-outlined">
+                              feed
+                           </i>
+                           Blog
+                        </a>
+</li>
+<li>
+<a class="d-flex align-items-center gap-3" href="blog-details.html">
+<i class="material-symbols-outlined">
+                              breaking_news_alt_1
+                           </i>
+                           Blog Dettails
+                        </a>
+</li>
+<li>
+<a class="d-flex align-items-center gap-3" href="error.html">
+<i class="material-symbols-outlined">
+                              warning
+                           </i>
+                           404 Page
+                        </a>
+</li>
+<li>
+<a class="d-flex align-items-center gap-3" href="contact.html">
+<i class="material-symbols-outlined">
+                              support_agent
+                           </i>
+                           Contact Us
+                        </a>
+</li>
+</ul>
+</li>
+<li class="search__show">
+<form action="#0" class="d-flex align-items-center round100">
+<input placeholder="Search" type="text"/>
+<button type="submit">
+<i class="material-symbols-outlined">
+                           search
+                        </i>
+</button>
+</form>
+</li>
+</ul>
+<div class="menu__right__components d-flex align-items-center">
+<div class="menu__components d-flex align-items-center">
+<div class="dropdown">
+<a aria-expanded="true" class="link globe__language d-flex align-items-center" data-bs-offset="0,14" data-bs-toggle="dropdown" href="#">
+<i class="material-symbols-outlined">
+                           public
+                        </i>
+<i class="material-symbols-outlined">
+                           keyboard_arrow_down
+                        </i>
+</a>
+<div class="dropdown-menu language__dropdown dropdown-start" data-popper-placement="bottom-start">
+<ul class="list">
+<li class="dropdown-item">
+<span class="d-block white pb-1"> English </span>
+</li>
+<li class="dropdown-item">
+<span class="d-block white pb-1"> United States </span>
+</li>
+<li class="dropdown-item">
+<span class="d-block white pb-1"> Spanish </span>
+</li>
+<li class="dropdown-item">
+<span class="d-block white pb-1"> Spain </span>
+</li>
+</ul>
+</div>
+</div>
+<div class="dropdown notification__dropdown">
+<a aria-expanded="true" class="link glose__icon" data-bs-offset="0,14" data-bs-toggle="dropdown" href="#">
+<i class="material-symbols-outlined">
+                           notifications
+                        </i>
+</a>
+<div class="dropdown-menu dropdown-menu-end" data-popper-placement="bottom-end">
+<ul class="list">
+<li class="mb-16">
+<a class="link d-flex dropdown-item" href="#0">
+<img alt="img" class="notification__thumb" src="assets/img/upcomming/up1.jpg"/>
+<span class="notify__content">
+<span class="fs-16 d-block fw-600 white">Jenny95</span>
+<span class="fs-14 message d-block fw-500 white">Message alert!</span>
+<span class="fs-10 fw-400 white">10 Min ago</span>
+</span>
+</a>
+</li>
+<li class="mb-16">
+<a class="link d-flex dropdown-item" href="#0">
+<img alt="img" class="notification__thumb" src="assets/img/upcomming/up2.jpg"/>
+<span class="notify__content">
+<span class="fs-16 d-block fw-600 white">Arle MCcoy</span>
+<span class="fs-14 message d-block fw-500 white">Message alert!</span>
+<span class="fs-10 fw-400 white">1 days ago</span>
+</span>
+</a>
+</li>
+<li>
+<a class="link d-flex dropdown-item" href="#0">
+<img alt="img" class="notification__thumb" src="assets/img/upcomming/up3.jpg"/>
+<span class="notify__content">
+<span class="fs-16 d-block fw-600 white">Courtney Jr</span>
+<span class="fs-14 message d-block fw-500 white">Message alert!</span>
+<span class="fs-10 fw-400 white">2 Month ago</span>
+</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="dropdown profie__dropdown">
+<a aria-expanded="true" class="link user__active" data-bs-offset="0,16" data-bs-toggle="dropdown" href="#0">
+<img alt="image" class="img-fluid rounded-circle objec-fit-cover" src="assets/img/bn/profile.jpg"/>
+</a>
+<div class="dropdown-menu dropdown-menu-end" data-popper-placement="bottom-end">
+<div class="p-6">
+<div class="d-flex align-items-center mb-24 gap-3 max-width">
+<div class="jerny__uer ralt">
+<img alt="image" class="img-fluid jenny rounded-circle object-fit-cover flex-shrink-0" src="assets/img/bn/profile.jpg"/>
+<i class="bi bi-check checks d-flex align-items-center justify-content-center"></i>
+</div>
+<div class="flex-grow-1">
+<h5 class="fs-20 fw-600 white mb-0">Jenny95</h5>
+<span class="d-block fw-400 white fs-16">Info95@mail.com</span>
+</div>
+</div>
+<ul class="list">
+<li class="mb-16">
+<a class="link d-flex align-items-center gap-2 dropdown-item" href="javascript:void(0)">
+<span class="d-block fs-16 white fw-500"> Create a Channel </span>
+</a>
+</li>
+<li class="mb-16">
+<a class="link d-flex align-items-center gap-2 dropdown-item" href="javascript:void(0)">
+<span class="d-block fs-16 white fw-500"> Theme </span>
+</a>
+</li>
+</ul>
+<ul class="list">
+<li class="mb-16">
+<a class="link d-flex align-items-center gap-2 dropdown-item" href="javascript:void(0)">
+<span class="d-block fs-16 white fw-500"> Settings </span>
+</a>
+</li>
+<li class="mb-16">
+<a class="link d-flex align-items-center gap-2 dropdown-item" href="javascript:void(0)">
+<span class="d-block fs-16 white fw-500"> Help </span>
+</a>
+</li>
+<li class="mb-16">
+<a class="link d-flex align-items-center gap-2 dropdown-item" href="javascript:void(0)">
+<span class="d-block fs-16 white fw-500"> Send Feedback </span>
+</a>
+</li>
+<li>
+<a class="link d-flex align-items-center gap-2 dropdown-item" href="javascript:void(0)">
+<span class="d-block fs-16 white fw-500"> Log Out </span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Header End -->
+<div class="main__body">
+<!--close menu-->
+<div class="closebts__two">
+<i class="material-symbols-outlined">
+      sort
+   </i>
+</div>
+<!--close menu-->
+<!--live video section-->
+<section class="live__video custom__150 ralt pr-24 pl-24 pb-80">
+<div class="container-fluid p-0">
+<div class="row g-4">
+<div class="col-lg-8">
+<div class="main__highlight__wrapper">
+<div class="attach__highlight__box round16 mb-40 mainbg p-8">
+<div class="custom__vidoe highlight__barwatch">
+<div class="containerc show-controls">
+<div class="wrapper">
+<div class="video-timeline">
+<div class="progress-area">
+<span>00:00</span>
+<div class="progress-bar"></div>
+</div>
+</div>
+<ul class="video-controls">
+<li class="options left">
+<button class="skip-backward"><i class="fas fa-backward"></i></button>
+<button class="play-pause"><i class="fas fa-play"></i></button>
+<button class="skip-forward"><i class="fas fa-forward"></i></button>
+<button class="volume"><i class="fa-solid fa-volume-high"></i></button>
+<input max="1" min="0" step="any" type="range"/>
+<div class="video-timer">
+<p class="current-time">00:00</p>
+<p class="separator"> / </p>
+<p class="video-duration">00:00</p>
+</div>
+</li>
+<li class="options right">
+<div class="playback-content">
+<button class="playback-speed">
+<span class="material-symbols-outlined">
+                                          autoplay
+                                          </span>
+</button>
+<ul class="speed-options">
+<li data-speed="2">2x</li>
+<li data-speed="1.5">1.5x</li>
+<li class="active" data-speed="1">Normal</li>
+<li data-speed="0.75">0.75x</li>
+<li data-speed="0.5">0.5x</li>
+</ul>
+</div>
+<button class="setting">
+<i class="material-symbols-outlined">
+                                          settings
+                                       </i>
+</button>
+<button class="pic-in-pic">
+<span class="material-symbols-outlined">
+                                          iframe
+                                       </span>
+</button>
+<button class="fit__screen">
+<i class="material-symbols-outlined">
+                                          fit_screen
+                                       </i>
+</button>
+<button class="fullscreen">
+<i class="material-symbols-outlined">
+                                          fullscreen
+                                       </i>
+</button>
+</li>
+</ul>
+</div>
+<video src="assets/img/live/vid.mp4"></video>
+</div>
+</div>
+<div class="attach__highlight__content">
+<h2 class="fw-600 white mb-16">
+                        Highlights - England v Australia Day 1
+                     </h2>
+<span class="fs-18 fw-400 bodyfont whitesub d-block">
+                        Star Sports 2
+                     </span>
+<ul class="like__sharewrap flex-wrap mt-30 mb-30 d-flex align-items-center">
+<li class="d-flex align-items-center">
+<button class="justify-content-center gap-2 d-flex align-items-center" type="button">
+<i class="material-symbols-outlined base">
+                                 thumb_up
+                              </i>
+<span class="fs-16 fw-500 base bodyfont">
+                                 32k
+                              </span>
+</button>
+<button class="justify-content-center like__down gap-2 d-flex align-items-center" type="button">
+<i class="material-symbols-outlined white">
+                                 thumb_down
+                              </i>
+<span class="fs-16 fw-500 white bodyfont">
+                                 503
+                              </span>
+</button>
+</li>
+<li>
+<a class="justify-content-center d-flex align-items-center gap-2" href="#0">
+<i class="material-symbols-outlined white fs-20">
+                                 share
+                              </i>
+<span class="fs-16 fw-500 white bodyfont">
+                                 Share
+                              </span>
+</a>
+</li>
+<li>
+<button class="justify-content-center d-flex align-items-center gap-2" type="button">
+<i class="material-symbols-outlined base">
+                                 favorite
+                              </i>
+<span class="fs-16 fw-500 white bodyfont">
+                                 Save
+                              </span>
+</button>
+</li>
+<li>
+<button class="justify-content-center d-flex align-items-center" type="button">
+<i class="material-symbols-outlined white">
+                                 more_vert
+                              </i>
+</button>
+</li>
+</ul>
+<span class="fs-20 white bodyfont fw-500 d-block mb-16">
+                        4,983,187 views  17 Jun 2023, Live! Podcast on Star Sports 2
+                     </span>
+<p class="bodyfont whitesub fs-16 fw-400 mb-30">
+                        The Ashes is a historic and highly competitive cricket series played between England and Australia. The series is one of the most prestigious events in cricket, and it takes place alternately in England and Australia.
+                     </p>
+<p class="bodyfont whitesub fs-16 fw-400 mb-30">
+                        The rivalry between England and Australia in The Ashes dates back to 1882 when Australia won a Test match in England for the first time. A satirical obituary published in a British newspaper declared that English cricket had died and "the body will be cremated and the ashes taken to Australia." Thus, the term "The Ashes" was coined, and the contest between the two teams has carried that name ever since.
+                        The Ashes series consists of five Test matches, with the team that wins the majority of the matches taking home the coveted Ashes urn. 
+                     </p>
+<p class="bodyfont whitesub fs-16 fw-400 mb-30">
+                        The series is known for its intense battles, exceptional performances, and memorable moments that have become part of cricketing folklore.
+                        Matches between England and Australia in The Ashes are eagerly anticipated by cricket fans worldwide. The rivalry sparks fierce competition, and players from both teams strive to showcase their skills and outperform their opponents. The series has produced legendary cricketers, iconic innings, and unforgettable moments that have left a lasting impact on the sport.
+                     </p>
+<p class="bodyfont whitesub fs-16 baseborder__bottomdadh pb-16 mb-16 fw-400">
+                        Whether it's the fierce bowling spells, dramatic batting displays, or captivating fielding moments, The Ashes continues to captivate cricket fans with its rich history and thrilling contests.
+                     </p>
+<ul class="hight__tag d-flex align-items-center gap-3 flex-wrap">
+<li>
+<a class="base2 fs-16 fw-400 bodyfont" href="#0">
+                              #ashes
+                           </a>
+</li>
+<li>
+<a class="base2 fs-16 fw-400 bodyfont" href="#0">
+                              #testmatch
+                           </a>
+</li>
+<li>
+<a class="base2 fs-16 fw-400 bodyfont" href="#0">
+                              #cricket
+                           </a>
+</li>
+<li>
+<a class="base2 fs-16 fw-400 bodyfont" href="#0">
+                              #eng
+                           </a>
+</li>
+<li>
+<a class="base2 fs-16 fw-400 bodyfont" href="#0">
+                              #aus
+                           </a>
+</li>
+<li>
+<a class="base2 fs-16 fw-400 bodyfont" href="#0">
+                              #highlight
+                           </a>
+</li>
+</ul>
+</div>
+</div>
+<div class="comment__wrapper mainbg round16">
+<div class="comment__head d-flex align-items-center justify-content-between flex-wrap baseborder__bottomdadh pb-30 mb-30">
+<h4 class="white fw-600">
+                        Comments
+                     </h4>
+<div class="sort__wrap d-flex align-items-center">
+<span class="fz-20 fw-500 white bodyfont">
+                           Sort By :
+                        </span>
+<select name="sort-option">
+<option value="1">
+                              Recent
+                           </option>
+<option value="1">
+                              New
+                           </option>
+<option value="1">
+                              Update
+                           </option>
+</select>
+</div>
+</div>
+<div class="addcomment__form mb-30 d-flex align-items-center">
+<div class="author">
+<img alt="img" class="round100" src="assets/img/author/author1.jpg"/>
+</div>
+<form action="#0" class="commentform d-flex align-items-center">
+<input placeholder="Add a comment" type="text"/>
+<button class="d-flex align-items-center justify-content-center" type="submit">
+<i class="material-symbols-outlined">
+                              send
+                           </i>
+</button>
+</form>
+</div>
+<div class="comments__box mb-30 d-flex">
+<div class="author">
+<img alt="img" class="round100" src="assets/img/author/author2.jpg"/>
+</div>
+<div class="comment__boxcontent">
+<h4 class="white headtext mb-10 d-flex align-items-center">
+                           Guy Hawkins <span class="fs-16 fw-400 whitesub">9 days ago</span>
+</h4>
+<p class="fs-18 white mb-20">
+                           I have been a loyal user of SportStream for over a year now, and I can confidently say that it offers an unmatched sports streaming experience. From the seamless user interface to the extensive range...
+                        </p>
+<div class="feedback__content d-flex align-items-center">
+<button class="like base fs-16 bodyfont d-flex align-items-center gap-2" type="button">
+<i class="material-symbols-outlined base">
+                                 thumb_up
+                              </i> 
+                              178
+                           </button>
+<a class="reply base fs-16 bodyfont d-flex align-items-center gap-2" href="javascript:void(0)">
+<i class="material-symbols-outlined base">
+                                 chat
+                              </i>  
+                              Reply
+                           </a>
+</div>
+<div class="reply__content">
+<div class="d-flex small__author align-items-center">
+<div class="author__thumbs">
+<img alt="Author" class="round100" src="assets/img/author/sauthor.jpg"/>
+</div>
+<form action="#" class="d-flex align-items-center">
+<input name="replytext" placeholder="Join the discussion..." required="" type="text"/>
+<button name="replysubmit" type="submit">
+<i class="material-symbols-outlined">
+                                       send
+                                    </i>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="comments__box mb-30 d-flex">
+<div class="author">
+<img alt="img" class="round100" src="assets/img/author/author3.jpg"/>
+</div>
+<div class="comment__boxcontent">
+<h4 class="white headtext mb-10 d-flex align-items-center">
+                           Jerome Bell <span class="fs-16 fw-400 whitesub">9 days ago</span>
+</h4>
+<p class="fs-18 white mb-20">
+                           I have been a loyal user of SportStream for over a year now, and I can confidently say that it offers an unmatched sports streaming experience. From the seamless user interface to the extensive range...
+                        </p>
+<div class="feedback__content d-flex align-items-center">
+<button class="like base fs-16 bodyfont d-flex align-items-center gap-2" type="button">
+<i class="material-symbols-outlined base">
+                                 thumb_up
+                              </i> 
+                              178
+                           </button>
+<a class="reply whitesub fs-16 bodyfont d-flex align-items-center gap-2" href="javascript:void(0)">
+<i class="material-symbols-outlined whitesub">
+                                 chat
+                              </i>  
+                              Reply
+                           </a>
+</div>
+<div class="reply__content">
+<div class="d-flex small__author align-items-center">
+<div class="author__thumbs">
+<img alt="Author" class="round100" src="assets/img/author/sauthor.jpg"/>
+</div>
+<form action="#" class="d-flex align-items-center">
+<input name="replytext" placeholder="Join the discussion..." required="" type="text"/>
+<button name="replysubmit" type="submit">
+<i class="material-symbols-outlined">
+                                       send
+                                    </i>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="comments__box mb-30 d-flex">
+<div class="author">
+<img alt="img" class="round100" src="assets/img/author/author4.jpg"/>
+</div>
+<div class="comment__boxcontent">
+<h4 class="white headtext mb-10 d-flex align-items-center">
+                           Savannah Nguyen <span class="fs-16 fw-400 whitesub">9 days ago</span>
+</h4>
+<p class="fs-18 white mb-20">
+                           I have been a loyal user of SportStream for over a year now, and I can confidently say that it offers an unmatched sports streaming experience. From the seamless user interface to the extensive range...
+                        </p>
+<div class="feedback__content d-flex align-items-center">
+<button class="like base fs-16 bodyfont d-flex align-items-center gap-2" type="button">
+<i class="material-symbols-outlined base">
+                                 thumb_up
+                              </i> 
+                              178
+                           </button>
+<a class="reply whitesub fs-16 bodyfont d-flex align-items-center gap-2" href="javascript:void(0)">
+<i class="material-symbols-outlined whitesub">
+                                 chat
+                              </i>  
+                              Reply
+                           </a>
+</div>
+<div class="reply__content">
+<div class="d-flex small__author align-items-center">
+<div class="author__thumbs">
+<img alt="Author" class="round100" src="assets/img/author/sauthor.jpg"/>
+</div>
+<form action="#" class="d-flex align-items-center">
+<input name="replytext" placeholder="Join the discussion..." required="" type="text"/>
+<button name="replysubmit" type="submit">
+<i class="material-symbols-outlined">
+                                       send
+                                    </i>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="comments__box mb-30 d-flex">
+<div class="author">
+<img alt="img" class="round100" src="assets/img/author/author5.jpg"/>
+</div>
+<div class="comment__boxcontent">
+<h4 class="white headtext mb-10 d-flex align-items-center">
+                           Cody Fisher <span class="fs-16 fw-400 whitesub">9 days ago</span>
+</h4>
+<p class="fs-18 white mb-20">
+                           I have been a loyal user of SportStream for over a year now, and I can confidently say that it offers an unmatched sports streaming experience. From the seamless user interface to the extensive range...
+                        </p>
+<div class="feedback__content d-flex align-items-center">
+<button class="like base fs-16 bodyfont d-flex align-items-center gap-2" type="button">
+<i class="material-symbols-outlined base">
+                                 thumb_up
+                              </i> 
+                              178
+                           </button>
+<a class="reply whitesub fs-16 bodyfont d-flex align-items-center gap-2" href="javascript:void(0)">
+<i class="material-symbols-outlined whitesub">
+                                 chat
+                              </i>  
+                              Reply
+                           </a>
+</div>
+<div class="reply__content">
+<div class="d-flex small__author align-items-center">
+<div class="author__thumbs">
+<img alt="Author" class="round100" src="assets/img/author/sauthor.jpg"/>
+</div>
+<form action="#" class="d-flex align-items-center">
+<input name="replytext" placeholder="Join the discussion..." required="" type="text"/>
+<button name="replysubmit" type="submit">
+<i class="material-symbols-outlined">
+                                       send
+                                    </i>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="comments__box mb-30 d-flex">
+<div class="author">
+<img alt="img" class="round100" src="assets/img/author/author6.jpg"/>
+</div>
+<div class="comment__boxcontent">
+<h4 class="white headtext mb-10 d-flex align-items-center">
+                           Ralph Edwards <span class="fs-16 fw-400 whitesub">9 days ago</span>
+</h4>
+<p class="fs-18 white mb-20">
+                           I have been a loyal user of SportStream for over a year now, and I can confidently say that it offers an unmatched sports streaming experience. From the seamless user interface to the extensive range...
+                        </p>
+<div class="feedback__content d-flex align-items-center">
+<button class="like base fs-16 bodyfont d-flex align-items-center gap-2" type="button">
+<i class="material-symbols-outlined base">
+                                 thumb_up
+                              </i> 
+                              178
+                           </button>
+<a class="reply whitesub fs-16 bodyfont d-flex align-items-center gap-2" href="javascript:void(0)">
+<i class="material-symbols-outlined whitesub">
+                                 chat
+                              </i>  
+                              Reply
+                           </a>
+</div>
+<div class="reply__content">
+<div class="d-flex small__author align-items-center">
+<div class="author__thumbs">
+<img alt="Author" class="round100" src="assets/img/author/sauthor.jpg"/>
+</div>
+<form action="#" class="d-flex align-items-center">
+<input name="replytext" placeholder="Join the discussion..." required="" type="text"/>
+<button name="replysubmit" type="submit">
+<i class="material-symbols-outlined">
+                                       send
+                                    </i>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="comments__box mb-30 d-flex">
+<div class="author">
+<img alt="img" class="round100" src="assets/img/author/author7.jpg"/>
+</div>
+<div class="comment__boxcontent">
+<h4 class="white headtext mb-10 d-flex align-items-center">
+                           Wade Warren <span class="fs-16 fw-400 whitesub">9 days ago</span>
+</h4>
+<p class="fs-18 white mb-20">
+                           I have been a loyal user of SportStream for over a year now, and I can confidently say that it offers an unmatched sports streaming experience. From the seamless user interface to the extensive range...
+                        </p>
+<div class="feedback__content d-flex align-items-center">
+<button class="like base fs-16 bodyfont d-flex align-items-center gap-2" type="button">
+<i class="material-symbols-outlined base">
+                                 thumb_up
+                              </i> 
+                              178
+                           </button>
+<a class="reply whitesub fs-16 bodyfont d-flex align-items-center gap-2" href="javascript:void(0)">
+<i class="material-symbols-outlined whitesub">
+                                 chat
+                              </i>  
+                              Reply
+                           </a>
+</div>
+<div class="reply__content">
+<div class="d-flex small__author align-items-center">
+<div class="author__thumbs">
+<img alt="Author" class="round100" src="assets/img/author/sauthor.jpg"/>
+</div>
+<form action="#" class="d-flex align-items-center">
+<input name="replytext" placeholder="Join the discussion..." required="" type="text"/>
+<button name="replysubmit" type="submit">
+<i class="material-symbols-outlined">
+                                       send
+                                    </i>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="seemore baseborder__topdadh pt-40">
+<a class="cmn--btn" href="#0">
+<span>
+                           See More
+                        </span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-12">
+<div class="heighlight__sidebar mainbg round16">
+<h4 class="white pb-40 mb-40 baseborder__bottomdadh">
+                  More Highlights
+               </h4>
+<div class="custom__responsive">
+<div class="small__heightlisht__item mb-24 d-flex align-items-center">
+<a class="thumb ralt" href="#0">
+<img alt="img" class="round16" src="assets/img/highlight/club1.jpg"/>
+<span class="live__badge">
+                           22:26
+                        </span>
+</a>
+<div class="content">
+<a class="fs-20 d-block mb-2 fw-600 bodyfont white" href="#0">
+                           Club A vs Club B
+                        </a>
+<span class="fs-14 d-block mb-2 bodyfont whitesub">
+                           Bein Sports - UFC
+                        </span>
+<div class="d-flex flex-wrap fs-16 gap-2 bodyfont white align-items-center">
+                           1.8M Views
+                           <span class="view__month">
+                              6 month ago
+                           </span>
+</div>
+</div>
+</div>
+<div class="small__heightlisht__item mb-24 d-flex align-items-center">
+<a class="thumb ralt" href="#0">
+<img alt="img" class="round16" src="assets/img/highlight/club2.jpg"/>
+<span class="live__badge">
+                           22:26
+                        </span>
+</a>
+<div class="content">
+<a class="fs-20 d-block mb-2 fw-600 bodyfont white" href="#0">
+                           Basketball Highlight
+                        </a>
+<span class="fs-14 d-block mb-2 bodyfont whitesub">
+                           Bein Sports - UFC
+                        </span>
+<div class="d-flex flex-wrap fs-16 gap-2 bodyfont white align-items-center">
+                           1.8M Views
+                           <span class="view__month">
+                              6 month ago
+                           </span>
+</div>
+</div>
+</div>
+<div class="small__heightlisht__item mb-24 d-flex align-items-center">
+<a class="thumb ralt" href="#0">
+<img alt="img" class="round16" src="assets/img/highlight/club3.jpg"/>
+<span class="live__badge">
+                           22:26
+                        </span>
+</a>
+<div class="content">
+<a class="fs-20 d-block mb-2 fw-600 bodyfont white" href="#0">
+                           László vs Kamilla
+                        </a>
+<span class="fs-14 d-block mb-2 bodyfont whitesub">
+                           Xpress Epose
+                        </span>
+<div class="d-flex flex-wrap fs-16 gap-2 bodyfont white align-items-center">
+                           1.8M Views
+                           <span class="view__month">
+                              6 month ago
+                           </span>
+</div>
+</div>
+</div>
+<div class="small__heightlisht__item mb-24 d-flex align-items-center">
+<a class="thumb ralt" href="#0">
+<img alt="img" class="round16" src="assets/img/highlight/club4.jpg"/>
+<span class="live__badge">
+                           22:26
+                        </span>
+</a>
+<div class="content">
+<a class="fs-20 d-block mb-2 fw-600 bodyfont white" href="#0">
+                           Premier League 
+                        </a>
+<span class="fs-14 d-block mb-2 bodyfont whitesub">
+                           ESPN ++
+                        </span>
+<div class="d-flex flex-wrap fs-16 gap-2 bodyfont white align-items-center">
+                           1.8M Views
+                           <span class="view__month">
+                              6 month ago
+                           </span>
+</div>
+</div>
+</div>
+<div class="small__heightlisht__item mb-24 d-flex align-items-center">
+<a class="thumb ralt" href="#0">
+<img alt="img" class="round16" src="assets/img/highlight/club5.jpg"/>
+<span class="live__badge">
+                           22:26
+                        </span>
+</a>
+<div class="content">
+<a class="fs-20 d-block mb-2 fw-600 bodyfont white" href="#0">
+                           AUS vs ENG, Test Match 
+                        </a>
+<span class="fs-14 d-block mb-2 bodyfont whitesub">
+                           Bein Sports - Ashes
+                        </span>
+<div class="d-flex flex-wrap fs-16 gap-2 bodyfont white align-items-center">
+                           1.8M Views
+                           <span class="view__month">
+                              6 month ago
+                           </span>
+</div>
+</div>
+</div>
+<div class="small__heightlisht__item mb-24 d-flex align-items-center">
+<a class="thumb ralt" href="#0">
+<img alt="img" class="round16" src="assets/img/highlight/club6.jpg"/>
+<span class="live__badge">
+                           22:26
+                        </span>
+</a>
+<div class="content">
+<a class="fs-20 d-block mb-2 fw-600 bodyfont white" href="#0">
+                           Olympic Soccer Highlight
+                        </a>
+<span class="fs-14 d-block mb-2 bodyfont whitesub">
+                           SinePlax Multimedia
+                        </span>
+<div class="d-flex flex-wrap fs-16 gap-2 bodyfont white align-items-center">
+                           1.8M Views
+                           <span class="view__month">
+                              6 month ago
+                           </span>
+</div>
+</div>
+</div>
+<div class="small__heightlisht__item mb-24 d-flex align-items-center">
+<a class="thumb ralt" href="#0">
+<img alt="img" class="round16" src="assets/img/highlight/club7.jpg"/>
+<span class="live__badge">
+                           22:26
+                        </span>
+</a>
+<div class="content">
+<a class="fs-20 d-block mb-2 fw-600 bodyfont white" href="#0">
+                           Club C vs Club D
+                        </a>
+<span class="fs-14 d-block mb-2 bodyfont whitesub">
+                           Bein Sports - UFC
+                        </span>
+<div class="d-flex flex-wrap fs-16 gap-2 bodyfont white align-items-center">
+                           1.8M Views
+                           <span class="view__month">
+                              6 month ago
+                           </span>
+</div>
+</div>
+</div>
+<div class="small__heightlisht__item mb-24 d-flex align-items-center">
+<a class="thumb ralt" href="#0">
+<img alt="img" class="round16" src="assets/img/highlight/club8.jpg"/>
+<span class="live__badge">
+                           22:26
+                        </span>
+</a>
+<div class="content">
+<a class="fs-20 d-block mb-2 fw-600 bodyfont white" href="#0">
+                           Boxing Championship 
+                        </a>
+<span class="fs-14 d-block mb-2 bodyfont whitesub">
+                           Bein Sports - Boxing
+                        </span>
+<div class="d-flex flex-wrap fs-16 gap-2 bodyfont white align-items-center">
+                           1.8M Views
+                           <span class="view__month">
+                              6 month ago
+                           </span>
+</div>
+</div>
+</div>
+<div class="small__heightlisht__item mb-24 d-flex align-items-center">
+<a class="thumb ralt" href="#0">
+<img alt="img" class="round16" src="assets/img/highlight/club9.jpg"/>
+<span class="live__badge">
+                           22:26
+                        </span>
+</a>
+<div class="content">
+<a class="fs-20 d-block mb-2 fw-600 bodyfont white" href="#0">
+                           Horse Racing Highlight
+                        </a>
+<span class="fs-14 d-block mb-2 bodyfont whitesub">
+                           SinePlax Multimedia
+                        </span>
+<div class="d-flex flex-wrap fs-16 gap-2 bodyfont white align-items-center">
+                           1.8M Views
+                           <span class="view__month">
+                              6 month ago
+                           </span>
+</div>
+</div>
+</div>
+<div class="small__heightlisht__item mb-24 d-flex align-items-center">
+<a class="thumb ralt" href="#0">
+<img alt="img" class="round16" src="assets/img/highlight/club10.jpg"/>
+<span class="live__badge">
+                           22:26
+                        </span>
+</a>
+<div class="content">
+<a class="fs-20 d-block mb-2 fw-600 bodyfont white" href="#0">
+                           NPL - American, Highlight
+                        </a>
+<span class="fs-14 d-block mb-2 bodyfont whitesub">
+                           SinePlax Multimedia
+                        </span>
+<div class="d-flex flex-wrap fs-16 gap-2 bodyfont white align-items-center">
+                           1.8M Views
+                           <span class="view__month">
+                              6 month ago
+                           </span>
+</div>
+</div>
+</div>
+<div class="small__heightlisht__item d-flex align-items-center">
+<a class="thumb ralt" href="#0">
+<img alt="img" class="round16" src="assets/img/highlight/club11.jpg"/>
+<span class="live__badge">
+                           22:26
+                        </span>
+</a>
+<div class="content">
+<a class="fs-20 d-block mb-2 fw-600 bodyfont white" href="#0">
+                           Cycling Racing Highlight
+                        </a>
+<span class="fs-14 d-block mb-2 bodyfont whitesub">
+                           Bein Sports - UFC
+                        </span>
+<div class="d-flex flex-wrap fs-16 gap-2 bodyfont white align-items-center">
+                           1.8M Views
+                           <span class="view__month">
+                              6 month ago
+                           </span>
+</div>
+</div>
+</div>
+</div>
+<div class="morebtn baseborder__topdadh mt-40 pt-40">
+<a class="cmn--btn" href="#0">
+<span>
+                        See More
+                     </span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!--live video section-->
+<!--Footer Section-->
+<footer class="footer__section pl-24 pr-24">
+<div class="container-fluid p-0">
+<div class="footer__bottom justify-lg-center d-lg-flex align-items-center">
+<p class="fs-16 fw-400 bodyfont text-white">
+            Copyright © 2023 <a class="base" href="javascript:void(0)">SportStream.</a> Designed By <a class="base2" href="https://themeforest.net/user/pixelaxis">Pixelaxis</a>
+</p>
+<ul class="social d-flex align-items-center flex-wrap">
+<li>
+<a href="#0">
+<i class="fab fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="#0">
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="#0">
+<i class="fab fa-pinterest"></i>
+</a>
+</li>
+<li>
+<a href="#0">
+<i class="fab fa-twitch"></i>
+</a>
+</li>
+<li>
+<a href="#0">
+<i class="fab fa-skype"></i>
+</a>
+</li>
+</ul>
+<ul class="help__support d-flex gap-3 align-items-center">
+<li>
+<a class="text-white bodyfont fs-16 fw-400" href="javascript:void(0)">
+                  Privacy policy
+               </a>
+</li>
+<li>
+<a class="text-white bodyfont fs-16 fw-400" href="javascript:void(0)">
+                  Terms &amp; Conditions
+               </a>
+</li>
+</ul>
+</div>
+</div>
+</footer>
+<!--Footer Section-->
+</div>
+<!--Search Popup-->
+<div class="search__popup" id="searchPopup">
+<form action="#" class="popup-content d-flex align-items-center">
+<input placeholder="Search Here" type="text"/>
+<button id="closeButton">
+<i class="bi bi-x-lg"></i>
+</button>
+</form>
+</div>
+<!--Search Popup-->
+<!--Jquery 3 6 0 Min Js-->
+<script src="assets/js/jquery-3.7.0.min.js"></script>
+<!--Bootstrap bundle Js-->
+<script src="assets/js/plugin.js"></script>
+<!--main Js-->
+<script src="assets/js/main.js"></script>
+<script>
+      const containerc = document.querySelector(".containerc"),
+		mainVideo = containerc.querySelector("video"),
+		videoTimeline = containerc.querySelector(".video-timeline"),
+		progressBar = containerc.querySelector(".progress-bar"),
+		volumeBtn = containerc.querySelector(".volume i"),
+		volumeSlider = containerc.querySelector(".left input");
+		currentVidTime = containerc.querySelector(".current-time"),
+		videoDuration = containerc.querySelector(".video-duration"),
+		skipBackward = containerc.querySelector(".skip-backward i"),
+		skipForward = containerc.querySelector(".skip-forward i"),
+		playPauseBtn = containerc.querySelector(".play-pause i"),
+		speedBtn = containerc.querySelector(".playback-speed span"),
+		speedOptions = containerc.querySelector(".speed-options"),
+		pipBtn = containerc.querySelector(".pic-in-pic span"),
+		fullScreenBtn = containerc.querySelector(".fullscreen i");
+		let timer;
+
+		const hideControls = () => {
+			if(mainVideo.paused) return;
+			timer = setTimeout(() => {
+				containerc.classList.remove("show-controls");
+			}, 3000);
+		}
+		hideControls();
+
+		containerc.addEventListener("mousemove", () => {
+			containerc.classList.add("show-controls");
+			clearTimeout(timer);
+			hideControls();   
+		});
+
+		const formatTime = time => {
+			let seconds = Math.floor(time % 60),
+			minutes = Math.floor(time / 60) % 60,
+			hours = Math.floor(time / 3600);
+
+			seconds = seconds < 10 ? `0${seconds}` : seconds;
+			minutes = minutes < 10 ? `0${minutes}` : minutes;
+			hours = hours < 10 ? `0${hours}` : hours;
+
+			if(hours == 0) {
+				return `${minutes}:${seconds}`
+			}
+			return `${hours}:${minutes}:${seconds}`;
+		}
+
+		videoTimeline.addEventListener("mousemove", e => {
+			let timelineWidth = videoTimeline.clientWidth;
+			let offsetX = e.offsetX;
+			let percent = Math.floor((offsetX / timelineWidth) * mainVideo.duration);
+			const progressTime = videoTimeline.querySelector("span");
+			offsetX = offsetX < 20 ? 20 : (offsetX > timelineWidth - 20) ? timelineWidth - 20 : offsetX;
+			progressTime.style.left = `${offsetX}px`;
+			progressTime.innerText = formatTime(percent);
+		});
+
+		videoTimeline.addEventListener("click", e => {
+			let timelineWidth = videoTimeline.clientWidth;
+			mainVideo.currentTime = (e.offsetX / timelineWidth) * mainVideo.duration;
+		});
+
+		mainVideo.addEventListener("timeupdate", e => {
+			let {currentTime, duration} = e.target;
+			let percent = (currentTime / duration) * 100;
+			progressBar.style.width = `${percent}%`;
+			currentVidTime.innerText = formatTime(currentTime);
+		});
+
+		mainVideo.addEventListener("loadeddata", () => {
+			videoDuration.innerText = formatTime(mainVideo.duration);
+		});
+
+		const draggableProgressBar = e => {
+			let timelineWidth = videoTimeline.clientWidth;
+			progressBar.style.width = `${e.offsetX}px`;
+			mainVideo.currentTime = (e.offsetX / timelineWidth) * mainVideo.duration;
+			currentVidTime.innerText = formatTime(mainVideo.currentTime);
+		}
+
+		volumeBtn.addEventListener("click", () => {
+			if(!volumeBtn.classList.contains("fa-volume-high")) {
+				mainVideo.volume = 0.5;
+				volumeBtn.classList.replace("fa-volume-xmark", "fa-volume-high");
+			} else {
+				mainVideo.volume = 0.0;
+				volumeBtn.classList.replace("fa-volume-high", "fa-volume-xmark");
+			}
+			volumeSlider.value = mainVideo.volume;
+		});
+
+		volumeSlider.addEventListener("input", e => {
+			mainVideo.volume = e.target.value;
+			if(e.target.value == 0) {
+				return volumeBtn.classList.replace("fa-volume-high", "fa-volume-xmark");
+			}
+			volumeBtn.classList.replace("fa-volume-xmark", "fa-volume-high");
+		});
+
+		speedOptions.querySelectorAll("li").forEach(option => {
+			option.addEventListener("click", () => {
+				mainVideo.playbackRate = option.dataset.speed;
+				speedOptions.querySelector(".active").classList.remove("active");
+				option.classList.add("active");
+			});
+		});
+
+		document.addEventListener("click", e => {
+			if(e.target.tagName !== "SPAN" || e.target.className !== "material-symbols-rounded") {
+				speedOptions.classList.remove("show");
+			}
+		});
+
+		fullScreenBtn.addEventListener("click", () => {
+			containerc.classList.toggle("fullscreen");
+			if(document.fullscreenElement) {
+				fullScreenBtn.classList.replace("fa-compress", "fa-expand");
+				return document.exitFullscreen();
+			}
+			fullScreenBtn.classList.replace("fa-expand", "fa-compress");
+			containerc.requestFullscreen();
+		});
+
+		speedBtn.addEventListener("click", () => speedOptions.classList.toggle("show"));
+		pipBtn.addEventListener("click", () => mainVideo.requestPictureInPicture());
+		skipBackward.addEventListener("click", () => mainVideo.currentTime -= 5);
+		skipForward.addEventListener("click", () => mainVideo.currentTime += 5);
+		mainVideo.addEventListener("play", () => playPauseBtn.classList.replace("fa-play", "fa-pause"));
+		mainVideo.addEventListener("pause", () => playPauseBtn.classList.replace("fa-pause", "fa-play"));
+		playPauseBtn.addEventListener("click", () => mainVideo.paused ? mainVideo.play() : mainVideo.pause());
+		videoTimeline.addEventListener("mousedown", () => videoTimeline.addEventListener("mousemove", draggableProgressBar));
+		document.addEventListener("mouseup", () => videoTimeline.removeEventListener("mousemove", draggableProgressBar));
+	// video play//
+   </script>
+
+<div class="chat-container">
+<div class="chat-header">
+    💬 Obrolan
+  </div>
+<div class="chat-body" id="chat-body">
+<!-- Pesan akan muncul di sini -->
+</div>
+<form id="chat-form">
+<input id="chat-input" placeholder="Tulis pesan..." required="" type="text"/>
+<button type="submit">Kirim</button>
+</form>
+</div>
+
+<script>
+document.getElementById('chat-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const input = document.getElementById('chat-input');
+  const message = input.value.trim();
+  if (message) {
+    const chatBody = document.getElementById('chat-body');
+    const msgElem = document.createElement('div');
+    msgElem.textContent = "👤 Kamu: " + message;
+    chatBody.appendChild(msgElem);
+    chatBody.scrollTop = chatBody.scrollHeight;
+    input.value = '';
+  }
+});
+</script>
+</body>
+</html>
